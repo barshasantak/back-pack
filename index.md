@@ -81,7 +81,7 @@ On first launch Backpack creates its data folder and an empty database. You will
   - **Create Project** – starts you with a clean slate;
   - **Load Sample Data** – fills the app with a realistic example so you can explore.
 
-> **Sample data** is offered only while there are no projects. It creates four developers (Ava Chen, Marcus Lee, Priya Nair, Tomás Ortega) and two projects (**Atlas Mobile**, key `ATL`, and **Beacon API**, key `BCN`). Each project gets 14 work items, 8 RAID items, 5 labels and a few comments, with realistic dates, so the dashboard, heat map and RAID Log all have something to show. Sample data is ordinary data: delete the two projects (and the developers) when you are finished exploring.
+> **Sample data** is offered only while there are no projects. It creates two developers (Tara Dev and Sys Admin) and two projects (**Atlas Mobile**, key `ATL`, and **Beacon API**, key `BCN`). Each project gets 14 work items, 8 RAID items, 5 labels and a few comments, with realistic dates, so the dashboard, heat map and RAID Log all have something to show. Sample data is ordinary data: delete the two projects (and the developers) when you are finished exploring.
 
 ### 3.3 A ten-minute first walkthrough
 
