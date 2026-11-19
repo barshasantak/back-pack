@@ -17,7 +17,7 @@ Backpack is built for an individual, or a small team sharing one Mac, who needs 
 - organise work into **projects** and track each piece of work as an **issue** (a task, bug or feature);
 - see work on a **board** and decide what matters most by **dragging cards** into order;
 - keep a **RAID log** of **risks, assumptions, issues and dependencies** alongside the work;
-- have risk scoring and a heat map;
+- have **risk scoring** and a **heat map** for quick visual analysis;
 - record **progress notes** (comments) and see an automatic **history** of changes;
 - review a **dashboard** of completion, turnaround and developer engagement;
 - **search** everything, with tolerance for typos;
