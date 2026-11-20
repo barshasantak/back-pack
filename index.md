@@ -913,7 +913,7 @@ Case is ignored. Within each group, results are ranked best-first.
 | `ATL-12` | Issue 12 of project ATL. |
 | `raid` | Every RAID item (the type name is searchable). |
 | `raid issue` | RAID issues (and anything else containing both words). |
-| `ava` | Items assigned to Ava, comments written by Ava, and any text containing "ava". |
+| `tara` | Items assigned to Tara Dev, comments written by Tara Dev, and any text containing "tara". |
 | `security` | Items labelled *security* (label names are searched; results display them as `#security`). |
 | `rolback` | Items or comments mentioning "rollback" (typo tolerated). |
 | `vendor delay` | Items where both words appear. |
