@@ -1505,8 +1505,13 @@ Backpack keeps the project's issues in memory and recalculates summaries on dema
 **Can I use a backup on another Mac?** No: it is encrypted with the original Mac's Keychain key. Copy the live data folder instead (17.5).
 
 **Does Backpack phone home?** No. It makes no network connections.
+ 
+### 21.7 Report Issues
+You can report any issues here: [https://forms.gle/XDUkjJ2TJzEruakX9](https://forms.gle/XDUkjJ2TJzEruakX9){:target="_blank"}
 
----
+Please provide clear, detailed information and the correct repository for the issue so it can be properly triaged and addressed. 
+  
+
 
 ## 22. Quick reference
 
