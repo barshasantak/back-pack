@@ -1,18 +1,18 @@
-## Backpack
+## Back-Pack
 
 <br>
 
 ## 1. Hero Section
 
-![Backpack](https://raw.githubusercontent.com/barshasantak/backpack/main/Backpack-128.png)
+![Back-Pack](https://raw.githubusercontent.com/barshasantak/back-pack/main/Backpack-128.png)
  
 <br>
 
-**Backpack** is a native macOS app for managing projects, tracking tasks, bugs, features, and RAID items (Risks, Assumptions, Issues, Dependencies) locally and securely on a single Mac with no accounts, no servers, and no network access required.
+**Back-Pack** is a native macOS app for managing projects, tracking tasks, bugs, features, and RAID items (Risks, Assumptions, Issues, Dependencies) locally and securely on a single Mac with no accounts, no servers, and no network access required.
  
-### 1.1 What Backpack is for
+### 1.1 What Back-Pack is for
 
-Backpack is built for an individual, or a small team sharing one Mac, who needs to:
+Back-Pack is built for an individual, or a small team sharing one Mac, who needs to:
 
 - organise work into **projects** and track each piece of work as an **issue** (a task, bug or feature);
 - see work on a **board** and decide what matters most by **dragging cards** into order;
@@ -23,7 +23,7 @@ Backpack is built for an individual, or a small team sharing one Mac, who needs 
 - **search** everything, with tolerance for typos;
 - keep a **tamper-evident log** of what happened in the application, and **encrypted backups** of the data.
 
-### 1.2 What Backpack is not
+### 1.2 What Back-Pack is not
 
 Being clear about this avoids surprises:
 
@@ -74,7 +74,7 @@ System log ── what the app did; encrypted backups and log archives protect i
 
 ### 3.2 First launch
 
-On first launch Backpack creates its data folder and an empty database. You will see:
+On first launch Back-Pack creates its data folder and an empty database. You will see:
 
 - a **sidebar** on the left (Management, Boards, System);
 - a **search bar** in the title bar;
@@ -97,21 +97,21 @@ On first launch Backpack creates its data folder and an empty database. You will
 9. **Review** – go back to **Projects**, select the project and read the **dashboard**.
 10. **Protect your data** – open **Security & Backups** and click **Back Up Now**.
 
-### 3.4 Where Backpack keeps data (short version)
+### 3.4 Where Back-Pack keeps data (short version)
 
 Your data is a SQLite file plus two folders of encrypted files. The exact location depends on how the app was built:
 
 | How the app was built/run | Data folder |
 |---|---|
-| Built from the Xcode project (sandboxed app) | `~/Library/Containers/TaraDesignStudio.Backpack/Data/Library/Application Support/Backpack/` |
-| Run with `swift run` (not sandboxed) | `~/Library/Application Support/Backpack/` |
-| Either, with the `BACKPACK_DATA_DIR` environment variable set | The folder you named |
+| Built from the Xcode project (sandboxed app) | `~/Library/Containers/TaraDesignStudio.Back-Pack/Data/Library/Application Support/Back-pack/` |
+| Run with `swift run` (not sandboxed) | `~/Library/Application Support/Back-Pack/` |
+| Either, with the `BACK-PACK_DATA_DIR` environment variable set | The folder you named |
 
 These two builds use **different data folders**, so data created in one is not visible in the other. Section 17 explains the contents and how to move data between them.
 
 ### 3.5 Closing the app
 
-Closing the window **quits the application** (there is no background mode). On quit, Backpack takes an automatic backup if automatic backups are on and the newest backup is more than an hour old.
+Closing the window **quits the application** (there is no background mode). On quit, Back-Pack takes an automatic backup if automatic backups are on and the newest backup is more than an hour old.
 
 ---
 
@@ -139,7 +139,7 @@ The sidebar can be hidden and shown with the toolbar's sidebar button. The windo
 
 ### 4.3 The "Acting as" menu
 
-At the right of the title bar, the **Acting as** menu says **Acting as: assignee** by default, or **Acting as *Name*** once you pick a developer. It controls who your changes are *attributed to*. Section 6.5 explains this in detail; in short, it is how Backpack knows which developer to credit on the dashboard and as the default comment author, because the app has no sign-in.
+At the right of the title bar, the **Acting as** menu says **Acting as: assignee** by default, or **Acting as *Name*** once you pick a developer. It controls who your changes are *attributed to*. Section 6.5 explains this in detail; in short, it is how Back-Pack knows which developer to credit on the dashboard and as the default comment author, because the app has no sign-in.
 
 ### 4.4 Keyboard shortcuts
 
@@ -160,7 +160,7 @@ At the right of the title bar, the **Acting as** menu says **Acting as: assignee
 
 ### 4.5 Alerts and messages
 
-When something cannot be done (for example a name is missing or too long), Backpack shows a message:
+When something cannot be done (for example a name is missing or too long), Back-Pack shows a message:
 
 - inside **sheets** (the issue editor, comment box, project form and label manager) the message appears as a red line *within the sheet*, so it can't be hidden behind it;
 - elsewhere it appears as a **"Something went wrong"** alert at the top of the window with an **OK** button.
@@ -171,7 +171,7 @@ Messages are written in plain language where the app can validate your input its
 
 ## 5. Projects
 
-A project is the highest level of organisation in Backpack. Every issue, label and comment lives inside one project.
+A project is the highest level of organisation in Back-Pack. Every issue, label and comment lives inside one project.
 
 ### 5.1 The Projects screen
 
@@ -238,7 +238,7 @@ It does **not** remove entries from the system log (which records that the delet
 
 ## 6. Developers and "Acting as"
 
-### 6.1 What a "developer" is in Backpack
+### 6.1 What a "developer" is in Back-Pack
 
 A developer is simply a **named person** on a list. There are no passwords, roles or permissions. Developers exist so that items can be **assigned**, comments can be **attributed**, and the dashboard can show **who has been active**.
 
@@ -254,7 +254,7 @@ Choose **Developers** in the sidebar.
 | Field | Rules |
 |---|---|
 | **Name** | Required, up to 100 characters. **Must be unique** (a duplicate gives *"Database error: UNIQUE constraint failed: developers.name"*). |
-| **Email** | Optional, up to 200 characters, must look like `name@example.com`. Stored for your reference only; Backpack never sends email. |
+| **Email** | Optional, up to 200 characters, must look like `name@example.com`. Stored for your reference only; Back-Pack never sends email. |
 
 ### 6.3 Active vs inactive
 
@@ -275,9 +275,9 @@ Deleting shows *"Their issues will become unassigned. Consider marking them inac
 - their **comments are kept** and continue to show the name they were posted under;
 - their entries in item **history** are kept, but no longer show a name, and their past activity no longer counts towards any dashboard.
 
-### 6.5 "Acting as": telling Backpack who you are
+### 6.5 "Acting as": telling Back-Pack who you are
 
-Because Backpack has no sign-in, the **Acting as** menu (right side of the title bar) records which developer *you* are working as. Options are **Assignee (default)** and each **active** developer.
+Because Back-Pack has no sign-in, the **Acting as** menu (right side of the title bar) records which developer *you* are working as. Options are **Assignee (default)** and each **active** developer.
 
 | Where it matters | Effect |
 |---|---|
@@ -366,7 +366,7 @@ Clicking a card, a RAID Log row, or choosing a search result opens the editor as
 
 ### 7.5 What "Done" means in practice
 
-When an item enters **Done** (by editing or by dragging) Backpack records the **completed time**. That timestamp drives *turnaround time* and *completed per week* on the dashboard. If you move an item out of Done, the completed time is cleared; moving it back sets a fresh one. Saving a Done item *without* changing its status keeps the original completed time.
+When an item enters **Done** (by editing or by dragging) Back-Pack records the **completed time**. That timestamp drives *turnaround time* and *completed per week* on the dashboard. If you move an item out of Done, the completed time is cleared; moving it back sets a fresh one. Saving a Done item *without* changing its status keeps the original completed time.
 
 ### 7.6 Issue numbers
 
@@ -380,7 +380,7 @@ An item is **overdue** when it has a due date that has passed *and* it is not Do
 
 ### 7.8 History: what is recorded
 
-Backpack writes history entries automatically for:
+Back-Pack writes history entries automatically for:
 
 - creation;
 - status, priority and **type** changes;
@@ -484,7 +484,7 @@ Further rules:
 - **Moving into Done** records the completed time; **moving out of Done** clears it. For **RAID items**, any status change **clears the outcome** (you can record it again in the editor); simply re-ranking inside *Done* leaves the outcome alone.
 - **History** records status and priority changes made by dragging.
 - **Filters don't disturb the order.** Hidden cards keep their relative positions.
-- **Only Backpack's own cards can be dropped.** Text or files dragged in from other apps are ignored.
+- **Only Back-Pack's own cards can be dropped.** Text or files dragged in from other apps are ignored.
 - **No undo.** To reverse a move, drag the card back.
 - You cannot drag a card to another project.
 
@@ -630,7 +630,7 @@ Because there is no sign-in, the author is whoever you pick in **Posting as**.
 
 ## 11. RAID tracking
 
-**RAID** stands for **Risks, Assumptions, Issues and Dependencies**: the four kinds of thing that, besides the work itself, decide whether a project succeeds. Backpack treats them as additional **issue types**, so they share the board, drag-and-drop ordering, labels, assignees, due dates, comments, history, search and backups, but each type also has its own fields, and there is a dedicated **RAID Log** for reviewing them across projects.
+**RAID** stands for **Risks, Assumptions, Issues and Dependencies**: the four kinds of thing that, besides the work itself, decide whether a project succeeds. Back-Pack treats them as additional **issue types**, so they share the board, drag-and-drop ordering, labels, assignees, due dates, comments, history, search and backups, but each type also has its own fields, and there is a dedicated **RAID Log** for reviewing them across projects.
 
 ### 11.1 The four types
 
@@ -641,7 +641,7 @@ Because there is no sign-in, the author is whoever you pick in **Posting as**.
 | **Issue** (RAID issue) | A problem that *has already happened* and needs resolving. | "Staging environment is unstable." |
 | **Dependency** | Something you need from (or owe to) *someone else*. Names a **counterparty** and a **direction**. | "Design tokens from the Brand team." |
 
-> **A note on naming.** The fourth type is simply called **Issue**, matching the RAID acronym, but in Backpack every item is loosely an "issue". To avoid confusion, wherever RAID items are shown next to ordinary work, the category is spelled out separately: the editor title reads **New Issue (RAID)**, its section is headed **RAID details · Issue**, and search results read **RAID · Issue · …**.
+> **A note on naming.** The fourth type is simply called **Issue**, matching the RAID acronym, but in Back-Pack every item is loosely an "issue". To avoid confusion, wherever RAID items are shown next to ordinary work, the category is spelled out separately: the editor title reads **New Issue (RAID)**, its section is headed **RAID details · Issue**, and search results read **RAID · Issue · …**.
 
 ### 11.2 Fields by type
 
@@ -792,7 +792,7 @@ Until you press **Save**, you can switch back and nothing is lost.
 - **Score honestly,** and re-score when circumstances change rather than editing the history away. Use the **Mitigation plan** for what you will *do*; use **comments** for what has *happened*.
 - **Give every RAID item an owner** (Assignee) and a **review/needed-by date**; items without either are rarely looked at.
 - **Always name the counterparty and direction** of a dependency, for dependencies in *both* directions: what you need and what others need from you.
-- **Convert, don't overwrite.** When a risk *occurs*, close it as **Occurred** and create a new **Issue** (mention the risk's key in its description or a comment). When an assumption is **Invalidated**, create the risk or issue it implies. Backpack does not link items automatically, so cross-reference by key.
+- **Convert, don't overwrite.** When a risk *occurs*, close it as **Occurred** and create a new **Issue** (mention the risk's key in its description or a comment). When an assumption is **Invalidated**, create the risk or issue it implies. Back-Pack does not link items automatically, so cross-reference by key.
 - **Use labels** (for example `security`, `vendor`, `release-1`) to slice the RAID Log by theme.
 - **Record outcomes** for closed items; they are the raw material for lessons learned.
 
@@ -897,7 +897,7 @@ Issue results show their status, project, assignee and `#labels`; RAID items sta
 
 ### 13.3 How the fuzzy matching works
 
-You do not need to type exactly. Backpack is forgiving in four ways:
+You do not need to type exactly. Back-Pack is forgiving in four ways:
 
 1. **Several words, any order.** Every word you type must match *something* on the item (they can match different fields). `vendor risk` finds a risk titled "Vendor delay" as well as a comment mentioning the vendor on a risk.
 2. **Exact pieces beat guesses.** Text that contains what you typed ranks highest, especially at the start of the text or of a word.
@@ -932,7 +932,7 @@ Case is ignored. Within each group, results are ranked best-first.
 
 ## 14. Activity history, the system log and log rotation
 
-Backpack keeps **two separate records** of what happens. Knowing the difference avoids confusion.
+Back-Pack keeps **two separate records** of what happens. Knowing the difference avoids confusion.
 
 | | **Item history** | **System log** |
 |---|---|---|
@@ -1081,7 +1081,7 @@ The **Automatic daily backup** switch controls the daily and quit backups only; 
 1. Go to **Security & Backups → Backups** and click **Restore…** beside the backup you want.
 2. Read the confirmation, *"The current database will be replaced with the backup from …. A safety backup of the current state is taken first."*, and click **Restore**.
 
-What Backpack does: decrypts the file → checks it is intact and not from a *newer* version of the app → takes a **safety backup** of what you have now → replaces the database → upgrades the restored data to the current structure if it was older → reloads the screens. The action is recorded in the system log.
+What Back-Pack does: decrypts the file → checks it is intact and not from a *newer* version of the app → takes a **safety backup** of what you have now → replaces the database → upgrades the restored data to the current structure if it was older → reloads the screens. The action is recorded in the system log.
 
 **Consequences to understand**
 - **Everything created or changed after the backup is gone** from the live data (it remains in the safety backup, which you can restore to undo the restore).
@@ -1091,7 +1091,7 @@ What Backpack does: decrypts the file → checks it is intact and not from a *ne
 
 ### 15.5 The encryption key: the most important caveat
 
-The key is created automatically the first time you make a backup, and stored in your **login Keychain** as *"com.example.Backpack.backup"*, marked **this device only**. macOS may ask you to allow access; choose **Always Allow** so automatic backups can run unattended.
+The key is created automatically the first time you make a backup, and stored in your **login Keychain** as *"com.example.Back-Pack.backup"*, marked **this device only**. macOS may ask you to allow access; choose **Always Allow** so automatic backups can run unattended.
 
 - **Backups and log archives can only be decrypted on this Mac, with this key.** If you erase the Mac, create a new user, delete the Keychain item or move to another Mac, **existing backups and archives become unreadable**.
 - There is **no key export** feature.
@@ -1110,7 +1110,7 @@ The key is created automatically the first time you make a backup, and stored in
 
 - The very first backup creates the Keychain key and may prompt for permission.
 - A backup is a point-in-time snapshot; there is no continuous protection between backups.
-- Backups cannot be opened outside Backpack (no manual extraction).
+- Backups cannot be opened outside Back-Pack (no manual extraction).
 - Because backups are encrypted per Mac, copying them to another Mac does not make them restorable there.
 
 ---
@@ -1119,7 +1119,7 @@ The key is created automatically the first time you make a backup, and stored in
 
 ### 16.1 The big picture
 
-- **Local only.** Backpack makes no network connections, has no accounts and sends no telemetry.
+- **Local only.** Back-Pack makes no network connections, has no accounts and sends no telemetry.
 - **No sign-in.** Anyone who can open the app on your Mac can read and change everything. Protect the Mac itself (login password, screen lock, **FileVault**).
 - **The live database is not encrypted** on disk. It is protected by macOS file permissions (your account only) and, in sandboxed builds, by the App Sandbox. **Backups and log archives are encrypted.**
 
@@ -1157,7 +1157,7 @@ Open **Security & Backups** and click **Run Security Audit**. Findings are sorte
 
 Each audit is itself recorded in the system log.
 
-### 16.4 What Backpack does *not* protect you from
+### 16.4 What Back-Pack does *not* protect you from
 
 - Someone using your logged-in Mac.
 - Malware running as you, or anyone with administrator access to the machine.
@@ -1182,14 +1182,14 @@ Each audit is itself recorded in the system log.
 
 | Item | What it is |
 |---|---|
-| `backpack.sqlite` | Your database: everything except backups and log archives. You may also see `backpack.sqlite-wal` and `backpack.sqlite-shm`; these are normal SQLite working files. **Do not delete them while the app is running**, and keep them together with `backpack.sqlite` when copying. |
+| `back-pack.sqlite` | Your database: everything except backups and log archives. You may also see `back-pack.sqlite-wal` and `back-pack.sqlite-shm`; these are normal SQLite working files. **Do not delete them while the app is running**, and keep them together with `back-pack.sqlite` when copying. |
 | `Backups/` | Encrypted backups (`backup-….bpbak`). |
 | `LogArchives/` | Encrypted rotated-log archives (`logs-…-<first>-<last>.bplog`). |
 
 
 ### 17.2 Settings
 
-Backpack has no Preferences window; settings live in the screens where they apply and are stored in your macOS preferences for the app.
+Back-Pack has no Preferences window; settings live in the screens where they apply and are stored in your macOS preferences for the app.
 
 | Setting | Where | Default |
 |---|---|---|
@@ -1203,23 +1203,23 @@ Backpack has no Preferences window; settings live in the screens where they appl
 
 ### 17.3 Starting over
 
-To wipe everything: **quit Backpack**, delete its data folder, and relaunch. You will get an empty database (and the *Load Sample Data* option). **This permanently deletes all data and backups in that folder.** The Keychain key remains and will be reused.
+To wipe everything: **quit Back-Pack**, delete its data folder, and relaunch. You will get an empty database (and the *Load Sample Data* option). **This permanently deletes all data and backups in that folder.** The Keychain key remains and will be reused.
 
 ### 17.4 Using a separate data folder
 
-For rehearsing a restore or trying things out, set the environment variable **`BACKPACK_DATA_DIR`** to a folder before launching (for example, `BACKPACK_DATA_DIR=~/BackpackTest swift run`, or add it to the scheme's environment in Xcode). Backpack then uses that folder instead. This works with builds that are **not sandboxed**; a sandboxed build may be refused access to folders outside its container (it will then report that it cannot open its database).
+For rehearsing a restore or trying things out, set the environment variable **`BACK-PACK_DATA_DIR`** to a folder before launching (for example, `BACK-PACK_DATA_DIR=~/Back-packTest swift run`, or add it to the scheme's environment in Xcode). Back-Pack then uses that folder instead. This works with builds that are **not sandboxed**; a sandboxed build may be refused access to folders outside its container (it will then report that it cannot open its database).
 
 ### 17.5 Moving to another Mac
 
-1. **Quit** Backpack on the old Mac.
+1. **Quit** Back-Pack on the old Mac.
 2. Copy the **entire data folder** (including any `-wal`/`-shm` files) to the same location on the new Mac, with the same kind of build.
-3. Launch Backpack on the new Mac.
+3. Launch Back-Pack on the new Mac.
 
 Your data comes across because the live database is not encrypted. **Backups and log archives will not open** on the new Mac (different Keychain key); new backups will be encrypted with the new Mac's key. Keep the old Mac's backups until you are satisfied.
 
 ### 17.6 The database
 
-Backpack uses **SQLite** with these tables:
+Back-Pack uses **SQLite** with these tables:
 
 | Table | Holds |
 |---|---|
@@ -1235,7 +1235,7 @@ Backpack uses **SQLite** with these tables:
 
 A database created by a **newer** version cannot be opened by an older app: it reports *"Database was created by a newer version of the app"* and quits, leaving your data untouched.
 
-**Reading the database yourself.** You can open a **copy** of `backpack.sqlite` with any SQLite tool to explore or report. **Never edit the live file while the app is running**: changes made outside Backpack bypass its validation, history and logging, and can corrupt it.
+**Reading the database yourself.** You can open a **copy** of `back-pack.sqlite` with any SQLite tool to explore or report. **Never edit the live file while the app is running**: changes made outside Back-Pack bypass its validation, history and logging, and can corrupt it.
 
 ---
 
@@ -1409,7 +1409,7 @@ The order within a column is shared, so a re-ranking you make in one view stays 
 
 ### 20.4 Size and performance
 
-Backpack keeps the project's issues in memory and recalculates summaries on demand. It is comfortable with thousands of issues and many thousands of comments; it is not designed for very large, enterprise-scale data. The log is bounded by rotation; backups copy the whole database each time, so they grow with your data.
+Back-Pack keeps the project's issues in memory and recalculates summaries on demand. It is comfortable with thousands of issues and many thousands of comments; it is not designed for very large, enterprise-scale data. The log is bounded by rotation; backups copy the whole database each time, so they grow with your data.
 
 ---
 
@@ -1462,8 +1462,8 @@ Backpack keeps the project's issues in memory and recalculates summaries on dema
 
 1. Read the message: it states the cause.
 2. If it says the database was created by a **newer version**, use the newer app (older apps cannot open it).
-3. If it mentions **permissions** or a sandbox problem, check that the data folder is yours and, if you set `BACKPACK_DATA_DIR`, that the build is allowed to use it.
-4. If the file is **damaged**: quit; in the data folder rename `backpack.sqlite`, `backpack.sqlite-wal` and `backpack.sqlite-shm` (leave `Backups` alone); relaunch (you get an empty database); then **Security & Backups → Restore…** the latest backup.
+3. If it mentions **permissions** or a sandbox problem, check that the data folder is yours and, if you set `BACK-PACK_DATA_DIR`, that the build is allowed to use it.
+4. If the file is **damaged**: quit; in the data folder rename `back-pack.sqlite`, `back-pack.sqlite-wal` and `back-pack.sqlite-shm` (leave `Backups` alone); relaunch (you get an empty database); then **Security & Backups → Restore…** the latest backup.
 
 ### 21.4 Backup or Keychain problems
 
@@ -1504,7 +1504,7 @@ Backpack keeps the project's issues in memory and recalculates summaries on dema
 
 **Can I use a backup on another Mac?** No: it is encrypted with the original Mac's Keychain key. Copy the live data folder instead (17.5).
 
-**Does Backpack phone home?** No. It makes no network connections.
+**Does Back-Pack phone home?** No. It makes no network connections.
  
 ### 21.7 Report Issues
 You can report any issues here: [https://forms.gle/XDUkjJ2TJzEruakX9](https://forms.gle/XDUkjJ2TJzEruakX9){:target="_blank"}
@@ -1577,7 +1577,7 @@ Please provide clear, detailed information and the correct repository for the is
 
 | Path (inside the data folder) | Contents |
 |---|---|
-| `backpack.sqlite` (+ `-wal`, `-shm`) | The database |
+| `back-pack.sqlite` (+ `-wal`, `-shm`) | The database |
 | `Backups/backup-YYYYMMDD-HHMMSS-mmm.bpbak` | Encrypted backups |
 | `LogArchives/logs-YYYYMMDD-HHMMSS-mmm-<first>-<last>.bplog` | Encrypted log archives |
 
