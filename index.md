@@ -103,9 +103,9 @@ Your data is a SQLite file plus two folders of encrypted files. The exact locati
 
 | How the app was built/run | Data folder |
 |---|---|
-| Built from the Xcode project (sandboxed app) | `~/Library/Containers/TaraDesignStudio.Back-Pack/Data/Library/Application Support/Back-pack/` |
-| Run with `swift run` (not sandboxed) | `~/Library/Application Support/Back-Pack/` |
-| Either, with the `BACK-PACK_DATA_DIR` environment variable set | The folder you named |
+| Built from the Xcode project (sandboxed app) | `~/Library/Containers/TaraDesignStudio.Backpack/Data/Library/Application Support/Backpack/` |
+| Run with `swift run` (not sandboxed) | `~/Library/Application Support/Backpack/` |
+| Either, with the `BACKPACK_DATA_DIR` environment variable set | The folder you named |
 
 These two builds use **different data folders**, so data created in one is not visible in the other. Section 17 explains the contents and how to move data between them.
 
@@ -1091,7 +1091,7 @@ What Back-Pack does: decrypts the file → checks it is intact and not from a *n
 
 ### 15.5 The encryption key: the most important caveat
 
-The key is created automatically the first time you make a backup, and stored in your **login Keychain** as *"com.example.Back-Pack.backup"*, marked **this device only**. macOS may ask you to allow access; choose **Always Allow** so automatic backups can run unattended.
+The key is created automatically the first time you make a backup, and stored in your **login Keychain** as *"com.example.Backpack.backup"*, marked **this device only**. macOS may ask you to allow access; choose **Always Allow** so automatic backups can run unattended.
 
 - **Backups and log archives can only be decrypted on this Mac, with this key.** If you erase the Mac, create a new user, delete the Keychain item or move to another Mac, **existing backups and archives become unreadable**.
 - There is **no key export** feature.
@@ -1182,7 +1182,7 @@ Each audit is itself recorded in the system log.
 
 | Item | What it is |
 |---|---|
-| `back-pack.sqlite` | Your database: everything except backups and log archives. You may also see `back-pack.sqlite-wal` and `back-pack.sqlite-shm`; these are normal SQLite working files. **Do not delete them while the app is running**, and keep them together with `back-pack.sqlite` when copying. |
+| `backpack.sqlite` | Your database: everything except backups and log archives. You may also see `backpack.sqlite-wal` and `backpack.sqlite-shm`; these are normal SQLite working files. **Do not delete them while the app is running**, and keep them together with `backpack.sqlite` when copying. |
 | `Backups/` | Encrypted backups (`backup-….bpbak`). |
 | `LogArchives/` | Encrypted rotated-log archives (`logs-…-<first>-<last>.bplog`). |
 
@@ -1207,7 +1207,7 @@ To wipe everything: **quit Back-Pack**, delete its data folder, and relaunch. Yo
 
 ### 17.4 Using a separate data folder
 
-For rehearsing a restore or trying things out, set the environment variable **`BACK-PACK_DATA_DIR`** to a folder before launching (for example, `BACK-PACK_DATA_DIR=~/Back-packTest swift run`, or add it to the scheme's environment in Xcode). Back-Pack then uses that folder instead. This works with builds that are **not sandboxed**; a sandboxed build may be refused access to folders outside its container (it will then report that it cannot open its database).
+For rehearsing a restore or trying things out, set the environment variable **`BACKPACK_DATA_DIR`** to a folder before launching (for example, `BACKPACK_DATA_DIR=~/BackpackTest swift run`, or add it to the scheme's environment in Xcode). Back-Pack then uses that folder instead. This works with builds that are **not sandboxed**; a sandboxed build may be refused access to folders outside its container (it will then report that it cannot open its database).
 
 ### 17.5 Moving to another Mac
 
@@ -1235,7 +1235,7 @@ Back-Pack uses **SQLite** with these tables:
 
 A database created by a **newer** version cannot be opened by an older app: it reports *"Database was created by a newer version of the app"* and quits, leaving your data untouched.
 
-**Reading the database yourself.** You can open a **copy** of `back-pack.sqlite` with any SQLite tool to explore or report. **Never edit the live file while the app is running**: changes made outside Back-Pack bypass its validation, history and logging, and can corrupt it.
+**Reading the database yourself.** You can open a **copy** of `backpack.sqlite` with any SQLite tool to explore or report. **Never edit the live file while the app is running**: changes made outside Back-Pack bypass its validation, history and logging, and can corrupt it.
 
 ---
 
@@ -1462,8 +1462,8 @@ Back-Pack keeps the project's issues in memory and recalculates summaries on dem
 
 1. Read the message: it states the cause.
 2. If it says the database was created by a **newer version**, use the newer app (older apps cannot open it).
-3. If it mentions **permissions** or a sandbox problem, check that the data folder is yours and, if you set `BACK-PACK_DATA_DIR`, that the build is allowed to use it.
-4. If the file is **damaged**: quit; in the data folder rename `back-pack.sqlite`, `back-pack.sqlite-wal` and `back-pack.sqlite-shm` (leave `Backups` alone); relaunch (you get an empty database); then **Security & Backups → Restore…** the latest backup.
+3. If it mentions **permissions** or a sandbox problem, check that the data folder is yours and, if you set `BACKPACK_DATA_DIR`, that the build is allowed to use it.
+4. If the file is **damaged**: quit; in the data folder rename `backpack.sqlite`, `backpack.sqlite-wal` and `backpack.sqlite-shm` (leave `Backups` alone); relaunch (you get an empty database); then **Security & Backups → Restore…** the latest backup.
 
 ### 21.4 Backup or Keychain problems
 
@@ -1577,7 +1577,7 @@ Please provide clear, detailed information and the correct repository for the is
 
 | Path (inside the data folder) | Contents |
 |---|---|
-| `back-pack.sqlite` (+ `-wal`, `-shm`) | The database |
+| `backpack.sqlite` (+ `-wal`, `-shm`) | The database |
 | `Backups/backup-YYYYMMDD-HHMMSS-mmm.bpbak` | Encrypted backups |
 | `LogArchives/logs-YYYYMMDD-HHMMSS-mmm-<first>-<last>.bplog` | Encrypted log archives |
 
