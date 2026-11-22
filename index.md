@@ -8,7 +8,7 @@
  
 <br>
 
-**Back-Pack** is a native macOS app for managing projects, tracking tasks, bugs, features, and RAID items (Risks, Assumptions, Issues, Dependencies) locally and securely on a single Mac with no accounts, no servers, and no network access required.
+**Back-Pack** is a native macOS app for tracking tasks, bugs, features, and RAID items (Risks, Assumptions, Issues, Dependencies) locally and securely on a single Mac with no accounts, no servers, and no network access needed.
  
 ### 1.1 What Back-Pack is for
 
