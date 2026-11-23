@@ -82,7 +82,11 @@ On first launch Back-Pack creates its data folder and an empty database. You wil
   - **Create Project** – starts you with a clean slate;
   - **Load Sample Data** – fills the app with a realistic example so you can explore.
 
+![First Launch](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-01.png)
+
 > **Sample data** is offered only while there are no projects. It creates two developers (Tara Dev and Sys Admin) and two projects (**Atlas Mobile**, key `ATL`, and **Beacon API**, key `BCN`). Each project gets 14 work items, 8 RAID items, 5 labels and a few comments, with realistic dates, so the dashboard, heat map and RAID Log all have something to show. Sample data is ordinary data: delete the two projects (and the developers) when you are finished exploring.
+
+![Sample Data](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-02.png)
 
 ### 3.3 A ten-minute first walkthrough
 
@@ -242,6 +246,8 @@ It does **not** remove entries from the system log (which records that the delet
 
 A developer is simply a **named person** on a list. There are no passwords, roles or permissions. Developers exist so that items can be **assigned**, comments can be **attributed**, and the dashboard can show **who has been active**.
 
+![Developers](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-03.png)
+ 
 ### 6.2 The Developers screen
 
 Choose **Developers** in the sidebar.
@@ -342,6 +348,8 @@ There are four ways:
 
 ### 7.4 The issue editor
 
+![Issue](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-08.png)
+
 Clicking a card, a RAID Log row, or choosing a search result opens the editor as a sheet. The title reads **New Issue** / **Edit Issue**, or, for RAID types, for example **New Risk (RAID)**. Two tabs sit at the top right: **Details** and **Comments**.
 
 **Details tab fields, in order:**
@@ -431,6 +439,8 @@ Back-Pack writes history entries automatically for:
 ### 8.1 Opening a board
 
 Click a project under **Boards** in the sidebar (only active projects are listed), or use **Open Board** on the project's page.
+
+![Board](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-05.png)
 
 ### 8.2 The header
 
@@ -718,6 +728,8 @@ On the board, RAID cards carry a coloured **type tag**, the risk **score chip** 
 
 Choose **RAID Log** in the sidebar. It lists every RAID item, across projects, and is designed for **review meetings**.
 
+![RAID](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-04.png)
+
 **Header and filters**
 
 | Control | What it does |
@@ -957,6 +969,8 @@ Choose **Logs** in the sidebar.
 - The list shows the **time**, a coloured **level** tag, the **category** and the **message**, newest first, up to **1,000 matching entries**. Message text can be selected and copied.
 - When you arrive from a **search result**, the screen shows a window of about 400 entries around that entry, highlights it and scrolls to it. A **Show latest** button returns to the normal view.
 
+![Logs](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-06.png)
+
 ### 14.3 Levels and categories
 
 | Level | Meaning |
@@ -1156,6 +1170,8 @@ Open **Security & Backups** and click **Run Security Audit**. Findings are sorte
 | **App Sandbox** | Whether the app is sandboxed. | **Info** for builds run outside Xcode (normal for `swift run`). |
 
 Each audit is itself recorded in the system log.
+
+![Security](https://raw.githubusercontent.com/barshasantak/back-pack/main/images/backpack-07.png)
 
 ### 16.4 What Back-Pack does *not* protect you from
 
