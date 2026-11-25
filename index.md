@@ -52,6 +52,28 @@ Being clear about this avoids surprises:
 
 ### 2.1 How the pieces fit together
 
+```text
+┌─ Project ────────────────────────────────────────────────────────────┐
+│                                                                      │
+│  ├── Labels (defined per project)                                    │
+│  └── Issues                                                          │
+│      │  Types: task · bug · feature · risk · assumption ·            │
+│      │         issue · dependency                                    │
+│      │                                                               │
+│      ├── Comments                                                    │
+│      ├── Labels (chosen from the project's labels)                   │
+│      └── History (automatic)                                         │
+└──────────────────────────────────────────────────────────────────────┘
+|                                                                      |
+|  Developers ──▶ Assigned to issues, authors of comments,             |
+|                 counted on the dashboard                             |
+└──────────────────────────────────────────────────────────────────────┘
+|                                                                      |
+|  System log ──▶ Records what the app did; protected by               |
+|                 encrypted backups and log archives                   |
+└──────────────────────────────────────────────────────────────────────┘
+```
+---
 ```
 Project ──┬── Issues (task · bug · feature · risk · assumption · issue · dependency)
           │      ├── Comments
