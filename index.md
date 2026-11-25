@@ -57,8 +57,8 @@ Being clear about this avoids surprises:
 │                                                                      │
 │  ├── Labels (defined per project)                                    │
 │  └── Issues                                                          │
-│      │  Types: task · bug · feature · risk · assumption ·            │
-│      │         issue · dependency                                    │
+│      │  Types: task · bug · feature · risk                           |
+|      |         assumption · issue · dependency                       │
 │      │                                                               │
 │      ├── Comments                                                    │
 │      ├── Labels (chosen from the project's labels)                   │
@@ -73,18 +73,6 @@ Being clear about this avoids surprises:
 |                 encrypted backups and log archives                   |
 └──────────────────────────────────────────────────────────────────────┘
 ```
----
-```
-Project ──┬── Issues (task · bug · feature · risk · assumption · issue · dependency)
-          │      ├── Comments
-          │      ├── Labels (chosen from the project's labels)
-          │      └── History (automatic)
-          └── Labels (defined per project)
-
-Developers ── assigned to issues, authors of comments, counted on the dashboard
-System log ── what the app did; encrypted backups and log archives protect it
-```
-
 ---
 
 ## 3. Getting started
